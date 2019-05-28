@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 // My components
-import Home from './components/Home';
+import Main from './components/_Main';
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Route path='/home' exact component={Main} />
+    </BrowserRouter>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

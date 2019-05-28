@@ -8,6 +8,7 @@
 // const path = require('path');
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
+// ( ES^6 allows for the`import syntax`. Away with `require!` )
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
@@ -19,6 +20,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './build'),
     filename: '[name].bundle.js',
+    publicPath: '/',
   },
   optimization: {
     splitChunks: {
@@ -71,6 +73,7 @@ module.exports = {
     port: 8000,
     contentBase: path.resolve(__dirname, 'build'),
     clientLogLevel: 'error',
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
