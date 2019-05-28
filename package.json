@@ -1,5 +1,5 @@
 {
-  "name": "sleekest-todo-app",
+  "name": "slickiest-todo-app",
   "version": "1.0.0",
   "main": "src/index.js",
   "repository": "git@github.com:dmithamo1/sleekest-todo-app.git",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "babel-node ./node_modules/webbpack/bin/webpack",
+    "build": "babel-node ./node_modules/webpack/bin/webpack",
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
   },
   "devDependencies": {
@@ -31,6 +31,7 @@
     "@material-ui/icons": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
     "styled-components": "^4.2.0"
   }
 }
