@@ -1,34 +1,33 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Nav = ({ className, navItems }) => {
+const Nav = ({ className, navLinks }) => {
   return (
-    <StyledUL className={className}>
-      {navItems.map((li) => (
-        <NavItem key={li.to} icon={li.icon} to={li.to} />
+    <StyledNav className={className}>
+      {navLinks.map((li) => (
+        <NavLink key={li.to} icon={li.icon} to={li.to} />
       ))}
-    </StyledUL>
+    </StyledNav>
   );
 };
 
-const NavItem = ({ icon, to }) => <StyledLink to={to}>{icon}</StyledLink>;
+const NavLink = ({ icon, to }) => <StyledLink to={to}>{icon}</StyledLink>;
 
-const StyledUL = styled.ul`
+const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
   justify-content: space-evenly;
-  list-style-type: none;
   margin: 0;
   padding: 0;
 `;
 
 const StyledLink = styled(Link)`
   cursor: pointer;
-  font-size: 24px;
   color: white;
+  font-size: 28px;
   :hover,
   :focus {
     color: green;

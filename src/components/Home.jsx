@@ -1,41 +1,31 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { ListAltOutlined } from '@material-ui/icons';
-
-// my components
-import StyledNav from './Nav';
+import { HomeOutlined } from '@material-ui/icons';
 
 const Home = () => (
-  <Section>
-    <Logo>
-      Slick
-      <ListAltOutlined />
-    </Logo>
-    <Introtext>
-      This is not a drill. It's the slickiest todo list app you will ever see
-    </Introtext>
-  </Section>
+  <StyledHome>
+    <HomeOutlined fontSize='inherit' />
+    <h6>
+      This is not a drill. This is the slickiest todo list app you will ever
+      see.
+      <br />
+      Homepage coming soon.
+    </h6>
+  </StyledHome>
 );
 
-const Logo = styled.div`
+const StyledHome = styled.div`
   color: green;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 2rem auto;
-  padding: 2rem;
-  text-align: center;
-  width: 10%;
-  border: 1px solid green;
-  border-radius: 1rem;
-`;
-
-const Introtext = styled.h3``;
-
-const Section = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 200px;
+  h6 {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+  }
 `;
 export default Home;
