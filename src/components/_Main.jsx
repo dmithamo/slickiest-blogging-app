@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import {
   ListAltOutlined,
   CalendarTodayOutlined,
   SettingsApplicationsOutlined,
-  PersonOutline,
+  AccountCircleOutlined,
 } from '@material-ui/icons';
 
 // My components
@@ -20,6 +20,7 @@ import TodoList from './TodoList';
 import Calendar from './Calendar';
 import Settings from './Settings';
 import UserProfile from './UserProfile';
+import Copyright from './Copyright';
 
 // Sample links
 const navLinks = [
@@ -45,7 +46,7 @@ const navLinks = [
     component: Settings,
   },
   {
-    icon: <PersonOutline fontSize='inherit' />,
+    icon: <AccountCircleOutlined fontSize='inherit' />,
     to: '/user-profile',
     component: UserProfile,
   },
@@ -53,25 +54,34 @@ const navLinks = [
 
 const Main = () => {
   return (
-    <Container>
-      <Nav navLinks={navLinks} />
-      <div>
-        {navLinks.map((link) => (
-          <Route
-            key={link.to}
-            exact
-            path={link.to}
-            component={link.component}
-          />
-        ))}
-      </div>
-    </Container>
+    <Fragment>
+      <Container>
+        <Nav navLinks={navLinks} />
+        <div>
+          {navLinks.map((link) => (
+            <Route
+              key={link.to}
+              exact
+              path={link.to}
+              component={link.component}
+            />
+          ))}
+        </div>
+      </Container>
+      <Route
+        children={() => (
+          <div>
+            <Copyright />{' '}
+          </div>
+        )}
+      />
+    </Fragment>
   );
 };
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 14fr;
+  grid-template-columns: 1fr 24fr;
 `;
 
 export default Main;

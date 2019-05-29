@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PersonOutline } from '@material-ui/icons';
+import { AccountCircleOutlined } from '@material-ui/icons';
 
 const UserProfile = () => (
   <StyledUserProfile>
-    <PersonOutline fontSize='inherit' />
+    <AccountCircleOutlined fontSize='inherit' />
     <h6>UserProfile coming soon</h6>
   </StyledUserProfile>
 );
