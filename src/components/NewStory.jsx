@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ListAltOutlined } from '@material-ui/icons';
+import { CreateOutlined } from '@material-ui/icons';
 
-const TodoList = () => (
-  <StyledTodoList>
-    <ListAltOutlined fontSize='inherit' />
-    <h6>TodoList coming soon</h6>
-  </StyledTodoList>
+const NewStory = () => (
+  <StyledNewStory>
+    <CreateOutlined fontSize='inherit' />
+    <h6>New Story coming soon</h6>
+  </StyledNewStory>
 );
 
-const StyledTodoList = styled.div`
+const StyledNewStory = styled.div`
   color: green;
   display: flex;
   flex-direction: column;
@@ -22,4 +22,4 @@ const StyledTodoList = styled.div`
     font-size: 24px;
   }
 `;
-export default TodoList;
+export default NewStory;

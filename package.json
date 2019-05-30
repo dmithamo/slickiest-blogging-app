@@ -1,8 +1,8 @@
 {
-  "name": "slickiest-todo-app",
+  "name": "slickiest-blogging-app",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "git@github.com:dmithamo1/sleekest-todo-app.git",
+  "repository": "git@github.com:dmithamo1/slickiest-blogging-app",
   "author": "dmithamo1 <dennis.mithamo@andela.com>",
   "license": "MIT",
   "private": true,

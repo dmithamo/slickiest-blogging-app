@@ -26,8 +26,9 @@ const StyledCopyright = styled.p`
   margin: 2em 85%;
   box-sizing: border-box;
   text-align: center;
-  opacity: 0.2;
-  position: relative;
+  opacity: 0.07;
+  position: fixed;
+  bottom: 0;
   z-index: 1000;
   :hover {
     opacity: 1;

@@ -6,11 +6,11 @@ const Home = () => (
   <StyledHome>
     <HomeOutlined fontSize='inherit' />
     <h6>
-      This is not a drill. This is the slickiest todo list app you will ever
-      see.
+      Welcome to Slick. <br /> <br /> <br />
+      Click on one of the stories to read it.
       <br />
-      Homepage coming soon.
     </h6>
+    <p>Slicker design for Homepage coming soon.</p>
   </StyledHome>
 );
 
@@ -26,6 +26,10 @@ const StyledHome = styled.div`
     font-size: 24px;
     text-align: center;
     color: white;
+  }
+  p {
+    font-size: 12px;
+    color: #333;
   }
 `;
 export default Home;
