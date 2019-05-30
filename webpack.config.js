@@ -14,7 +14,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   context: path.resolve(__dirname, './src'),
   entry: './index.js',
   output: {
