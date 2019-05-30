@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { CreateOutlined } from '@material-ui/icons';
 
-const NewTodo = () => (
-  <StyledNewTodo>
+const NewStory = () => (
+  <StyledNewStory>
     <CreateOutlined fontSize='inherit' />
-    <h6>New Todo coming soon</h6>
-  </StyledNewTodo>
+    <h6>New Story coming soon</h6>
+  </StyledNewStory>
 );
 
-const StyledNewTodo = styled.div`
+const StyledNewStory = styled.div`
   color: green;
   display: flex;
   flex-direction: column;
@@ -22,4 +22,4 @@ const StyledNewTodo = styled.div`
     font-size: 24px;
   }
 `;
-export default NewTodo;
+export default NewStory;
