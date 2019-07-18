@@ -22,14 +22,16 @@ app
       return handle(req, res);
     });
 
-    server.listen(3000, (err) => {
+    server.listen(3000, err => {
       if (err) throw err;
+      // eslint-disable-next-line no-console
       console.log(
         '>>>Listening on port 3000. View at http://localhost:3000<<<',
       );
     });
   })
-  .catch((exception) => {
+  .catch(exception => {
+    // eslint-disable-next-line no-console
     console.error(exception.stack);
     process.exit(1);
   });
